@@ -9,12 +9,24 @@ function start() {
 }
 
 function update() {
-    dy = dy + 0.05
-    console.log("Hello World")
+
+
+    if (dy < 2.5 ) {
+    dy = dy + 0.05}
 
     let cy = parseFloat(circle.getAttribute("cy"))
+
+
+if (cy > 100) {
+
+    dy = dy * (-1)
+}
+
+
     cy = cy + dy
     circle.setAttribute("cy", cy)
+
+    console.log("Hello World")
 
     window.requestAnimationFrame(update)
 }
