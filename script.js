@@ -6,6 +6,17 @@ let dx = 1
 
 
 function start() {
+    const svg = document.querySelector("svg")
+    for( let i = 0; i<10; i + 2) {
+        for(let j = 0; j<10; j+2){
+        const rect = document.createElementNS("http://www.w3.org/2000/svg", "rect")
+        rect.setAttribute("x", i*10)
+        rect.setAttribute("y", j*10)
+        rect.setAttribute("width", 10)
+        rect.setAttribute("height", 10)
+        rect.setAttribute("fill", "black")
+        svg.appendChild(rect)}
+    }
     window.requestAnimationFrame(update)
 }
 
