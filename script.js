@@ -2,6 +2,7 @@
 const circle = document.querySelector("#circ")
 
 let dy = 0
+let dx = 1
 
 
 function start() {
@@ -27,6 +28,23 @@ if (cy > 100) {
     circle.setAttribute("cy", cy)
 
     console.log("Hello World")
+
+
+
+//Sideways codeblock
+
+let cx = parseFloat(circle.getAttribute("cx"))
+
+if (cx > 100) {
+
+    dx = dx * (-1)
+} else if (cx < 0) {
+    dx = dx * (-1)
+}
+cx = cx + dx
+circle.setAttribute("cx", cx)
+
+
 
     window.requestAnimationFrame(update)
 }
