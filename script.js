@@ -13,6 +13,14 @@ function update() {
     console.log("Hello World")
 
     let cy = parseFloat(circle.getAttribute("cy"))
+
+
+if (cy > 100) {
+
+    dy = dy * (-1)
+}
+
+
     cy = cy + dy
     circle.setAttribute("cy", cy)
 
